@@ -1,10 +1,7 @@
-//while loop
+//for loop
 
 let vegetables=["carrot","leaks","brinjal"];
 
-let i=0;
-
-while(i<vegetables.length){
+for (let i=0;i<vegetables.length;i++){
     console.log(vegetables[i]);
-    i++;
 }

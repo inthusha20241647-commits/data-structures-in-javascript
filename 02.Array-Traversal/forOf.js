@@ -1,7 +1,7 @@
-//forEach function
+//for-of
 
 let vegetables=["carrot","leaks","brinjal"];
 
-vegetables.forEach(veg=>{
+for (let veg of vegetables){
     console.log(veg);
-});
+};
