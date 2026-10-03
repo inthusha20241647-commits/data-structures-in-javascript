@@ -1,31 +1,27 @@
 //program to implement stack using queue
-class StackUsingQueue{
-    
-    constructor() {
-        this.queue1=[];
-        this.queue2=[];
-    }
+class StackUsingQueue {
+  constructor() {
+    this.queue1 = [];
+    this.queue2 = [];
+  }
 
-    //enqueue
-    push(element){
-        this.queue1.push(element)
+  //enqueue
+  push(element) {
+    this.queue1.push(element);
+  }
+  //dequeue
+  pop() {
+    while (this.queue1.length > 1) {
+      this.queue2.push(this.queue1.shift());
     }
-    //dequeue
-    pop(){
-        while(this.queue1.length>1){
-            this.queue2.push(this.queue1.shift())
+    const poppedElement = (this.queue1.shift()[
+      // Destructuring assignment
+      //ES6
+      (this.queue2, this.queue1)
+    ] = [this.queue1, this.queue2]);
 
-        }
-        const poppedElement=this.queue1.shift()
-        
-        // Destructuring assignment
-        //ES6
-        [this.queue2,this.queue1]=[this.queue1,this.queue2]
-
-        return poppedElement;
-    }
-    
-    
+    return poppedElement;
+  }
 }
 
 let stackWithQueue = new StackUsingQueue();
